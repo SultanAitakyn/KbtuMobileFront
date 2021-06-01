@@ -32,15 +32,19 @@ export class Login extends Component {
 
   handleLogin = _ => {
     const api = API_URL + '/api/v1/user/login';
+    console.log('API URL: ', api);
     const data = {
       username: this.state.username,
       password: this.state.password,
     };
     console.log(data);
+
     this.props
       .fetch(api, data)
       .then(() => {
         this.props.setOverlay(false);
+        console.log(data);
+        console.log(api);
         ToastAndroid.showWithGravityAndOffset(
           'Login Success',
           ToastAndroid.LONG,
@@ -51,7 +55,7 @@ export class Login extends Component {
         this.props.navigation.navigate('tab');
       })
       .catch(err => {
-        console.log("EEEEERROR: ", err);
+        console.log('ERROR: ', err);
         ToastAndroid.showWithGravityAndOffset(
           err.response.data.message,
           ToastAndroid.LONG,

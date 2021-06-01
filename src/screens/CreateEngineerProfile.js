@@ -39,6 +39,7 @@ class createEngineerProfile extends Component {
 
   handleCreate = () => {
     const api = `${API_URL}/api/v1/engineer/`;
+    console.log('API URL: ', api);
     const data = {
       name: this.state.name,
       description: this.state.description,
@@ -50,6 +51,7 @@ class createEngineerProfile extends Component {
       email: this.state.email,
       phone: this.state.phone,
     };
+    console.log('\x1b[33m%s\x1b[0m', data);
     this.props
       .createEngineer(
         api,
@@ -62,6 +64,7 @@ class createEngineerProfile extends Component {
         this.props.navigation.navigate('tab');
       })
       .catch(e => {
+        console.log('\x1b[33m%s\x1b[0m', e);
         console.warn(e);
       });
   };

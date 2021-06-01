@@ -54,6 +54,7 @@ class MyProfile extends React.Component {
           `${API_URL}/api/v1/engineer/byUserId/` + this.props.auth.userId,
         )
         .then(res => {
+          console.log(`${API_URL}/api/v1/engineer/byUserId/` + this.props.auth.userId);
           if (res.value.data.dataShowed >= 1) {
             this.setState({profileStatus: true});
           } else {

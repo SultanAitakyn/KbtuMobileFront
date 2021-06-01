@@ -243,8 +243,8 @@ class ProfileCompany extends React.Component {
                     size="medium"
                     rounded
                     icon={{
-                      name: 'edit',
-                      type: 'font-awesome',
+                      name: 'account-edit',
+                      type: 'material-community',
                     }}
                   />
                   <Text>Edit Profile</Text>
@@ -280,7 +280,7 @@ class ProfileCompany extends React.Component {
                     onPress={() => this.props.logoutUser()}
                     size="medium"
                     rounded
-                    icon={{name: 'sign-out-alt', type: 'font-awesome'}}
+                    icon={{name: 'logout', type: 'material-community'}}
                   />
                   <Text>Logout</Text>
                 </View>

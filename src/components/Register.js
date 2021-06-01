@@ -36,6 +36,8 @@ export class Register extends Component {
 
   handleRegister = _ => {
     const api = API_URL + '/api/v1/user/register';
+    console.log('API URL: ', api);
+    console.log(api);
     const data = {
       email: this.state.email,
       username: this.state.username,
@@ -55,7 +57,7 @@ export class Register extends Component {
         );
       })
       .catch(err => {
-        console.log(err.response.data.message);
+        console.log(err);
         ToastAndroid.showWithGravityAndOffset(
           err.response.data.message,
           ToastAndroid.LONG,
@@ -116,7 +118,7 @@ export class Register extends Component {
           <CheckBox
             checkedIcon={
               <>
-                <Text>Register as Job seeker </Text>
+                <Text>Register as Engineer </Text>
                 <FontAwesome5Icon size={20} name={'laptop-code'} />
               </>
             }

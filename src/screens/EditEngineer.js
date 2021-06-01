@@ -63,6 +63,7 @@ class EditEngineer extends Component {
       phone: this.state.phone,
     };
     console.log(this.props.auth.userId);
+    console.log(api);
     this.props
       .updateEngineer(
         api,
@@ -75,6 +76,7 @@ class EditEngineer extends Component {
         this.props.navigation.navigate('tab');
       })
       .catch(e => {
+        console.log(e);
         console.warn(e);
       });
   };

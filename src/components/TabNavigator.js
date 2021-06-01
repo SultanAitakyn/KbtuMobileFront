@@ -26,15 +26,12 @@ const TabNavigator = createMaterialBottomTabNavigator(
             />
           </View>
         ),
-        activeColor: '#4267B2',
-        inactiveColor: '#1A2947',
-        barStyle: {backgroundColor: '#FFF'},
       },
     },
     Engineers: {
       screen: Engineers,
       navigationOptions: {
-        tabBarLabel: 'People',
+        tabBarLabel: 'Engineers',
         tabBarIcon: ({tintColor}) => (
           <View>
             <FontAwesome5
@@ -76,13 +73,10 @@ const TabNavigator = createMaterialBottomTabNavigator(
             <FontAwesome5
               style={[{color: tintColor}]}
               size={20}
-              name={'envelope-square'}
+              name={'question-circle'}
             />
           </View>
         ),
-        activeColor: '#4267B2',
-        inactiveColor: '#1A2947',
-        barStyle: {backgroundColor: '#FFF'},
       },
     },
   },

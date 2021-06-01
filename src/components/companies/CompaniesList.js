@@ -20,6 +20,7 @@ const CompaniesList = props => {
     velocityThreshold: 0.3,
     directionalOffsetThreshold: 80,
   };
+  console.log(props.companies.companies);
   return (
     <View style={styles.flexOne}>
       <Content style={styles.content}>

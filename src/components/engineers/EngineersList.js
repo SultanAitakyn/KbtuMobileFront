@@ -23,7 +23,7 @@ const EngineersList = props => {
     velocityThreshold: 0.3,
     directionalOffsetThreshold: 80,
   };
-  console.log('ALL ENGINEERS: ', props.engineers.engineers);
+  console.log(props);
   return (
     <View style={styles.flexOne}>
       <GestureRecognizer

@@ -66,10 +66,9 @@ const StackNavigator = createStackNavigator({
 
 const Main = createAppContainer(StackNavigator);
 
-console.disableYellowBox = true;
-
 class App extends React.Component {
   render() {
+    console.disableYellowBox = true;
     return (
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>

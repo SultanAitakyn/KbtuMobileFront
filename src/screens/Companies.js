@@ -10,7 +10,9 @@ import {fetchCompanies} from '../public/redux/actions/companies';
 
 class Companies extends React.Component {
   componentDidMount() {
-    this.props.fetch(API_URL + '/api/v1/company/');
+    console.log(API_URL + '/api/v1/company/');
+    this.props.fetch(API_URL + '/api/v1/company/').catch(err => console.log(err));
+    console.log('DAAAAAAAAAAAAAAAAA');
   }
 
   render() {

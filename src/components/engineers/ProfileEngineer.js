@@ -12,7 +12,7 @@ import {
   Image,
 } from 'react-native-elements';
 import Moment from 'react-moment';
-import {ListItem, Left, Button, Body, Content} from 'native-base';
+import {ListItem, Left, Button, Content} from 'native-base';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import {ScrollView} from 'react-native-gesture-handler';
 import {logout} from '../../public/redux/actions/user';
@@ -215,12 +215,10 @@ class ProfileEngineer extends React.Component {
                         />
                       </Button>
                     </Left>
-                      <Text>
-                        My skill is{' '}
-                        <Text style={{fontWeight: 'bold'}}>
-                          {engineer.skill}
-                        </Text>
-                      </Text>
+                    <Text>
+                      My skill is{' '}
+                      <Text style={{fontWeight: 'bold'}}>{engineer.skill}</Text>
+                    </Text>
                   </ListItem>
                   <ListItem icon>
                     <Left>
@@ -232,12 +230,12 @@ class ProfileEngineer extends React.Component {
                         />
                       </Button>
                     </Left>
-                      <Text>
-                        Expected Salary{' '}
-                        <Text style={{fontWeight: 'bold'}}>
-                          ${engineer.expected_salary}
-                        </Text>
+                    <Text>
+                      Expected Salary{' '}
+                      <Text style={{fontWeight: 'bold'}}>
+                        ${engineer.expected_salary}
                       </Text>
+                    </Text>
                   </ListItem>
                   <ListItem icon>
                     <Left>
@@ -249,12 +247,12 @@ class ProfileEngineer extends React.Component {
                         />
                       </Button>
                     </Left>
-                      <Text>
-                        Lives in{' '}
-                        <Text style={{fontWeight: 'bold'}}>
-                          {engineer.location}
-                        </Text>
+                    <Text>
+                      Lives in{' '}
+                      <Text style={{fontWeight: 'bold'}}>
+                        {engineer.location}
                       </Text>
+                    </Text>
                   </ListItem>
                   <ListItem icon>
                     <Left>
@@ -266,14 +264,14 @@ class ProfileEngineer extends React.Component {
                         />
                       </Button>
                     </Left>
-                      <Text>
-                        Born in{' '}
-                        <Text style={{fontWeight: 'bold'}}>
-                          <Moment format="D MMMM YYYY" element={Text}>
-                            {engineer.date_of_birth}
-                          </Moment>
-                        </Text>
+                    <Text>
+                      Born in{' '}
+                      <Text style={{fontWeight: 'bold'}}>
+                        <Moment format="D MMMM YYYY" element={Text}>
+                          {engineer.date_of_birth}
+                        </Moment>
                       </Text>
+                    </Text>
                   </ListItem>
                   <ListItem icon>
                     <Left>
@@ -285,11 +283,11 @@ class ProfileEngineer extends React.Component {
                         />
                       </Button>
                     </Left>
-                      <Text>
-                        <Text style={{fontWeight: 'bold'}}>
-                          {engineer.showcase}
-                        </Text>
+                    <Text>
+                      <Text style={{fontWeight: 'bold'}}>
+                        {engineer.showcase}
                       </Text>
+                    </Text>
                   </ListItem>
                   <ListItem icon>
                     <Left>
@@ -301,11 +299,9 @@ class ProfileEngineer extends React.Component {
                         />
                       </Button>
                     </Left>
-                      <Text>
-                        <Text style={{fontWeight: 'bold'}}>
-                          {engineer.phone}
-                        </Text>
-                      </Text>
+                    <Text>
+                      <Text style={{fontWeight: 'bold'}}>{engineer.phone}</Text>
+                    </Text>
                   </ListItem>
                   <ListItem icon>
                     <Left>
@@ -317,11 +313,9 @@ class ProfileEngineer extends React.Component {
                         />
                       </Button>
                     </Left>
-                      <Text>
-                        <Text style={{fontWeight: 'bold'}}>
-                          {engineer.email}
-                        </Text>
-                      </Text>
+                    <Text>
+                      <Text style={{fontWeight: 'bold'}}>{engineer.email}</Text>
+                    </Text>
                   </ListItem>
                 </Content>
                 <Divider
@@ -359,10 +353,7 @@ class ProfileEngineer extends React.Component {
                     }}
                     size="medium"
                     rounded
-                    icon={{
-                      name: 'account-edit',
-                      type: 'material-community',
-                    }}
+                    icon={{name: 'edit', type: 'font-awesome'}}
                   />
                   <Text>Edit Profile</Text>
                 </View>
@@ -397,7 +388,7 @@ class ProfileEngineer extends React.Component {
                     onPress={() => this.props.logoutUser()}
                     size="medium"
                     rounded
-                    icon={{name: 'logout', type: 'material-community'}}
+                    icon={{name: 'sign-out', type: 'font-awesome'}}
                   />
                   <Text>Logout</Text>
                 </View>

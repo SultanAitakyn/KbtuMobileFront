@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, Dimensions} from 'react-native';
 import {Text, Image, Tile} from 'react-native-elements';
-import {Button} from 'native-base';
 
 const About = props => {
+  console.log(props);
   return (
     <View
       style={{
@@ -20,18 +20,21 @@ const About = props => {
         width={240}
       />
       <Text h4 style={{marginTop: 10}}>
-        About
+        Mobile programming project
       </Text>
-      <Text style={{paddingHorizontal: 20, textAlign: 'center'}}>The <Text style={{fontWeight: 'bold'}}>SE project app </Text>
-        is Application to find employee or job</Text>
-      <Text style={{paddingHorizontal: 20, marginTop: 20, textAlign: 'center'}}>
-        v0.0.1
+      <Text style={{paddingHorizontal: 20, textAlign: 'center'}}>
+        This <Text style={{fontWeight: 'bold'}}>Project App</Text> intended for
+        job seekers and companies. Companies can search engineers while
+        engineers search companies.
       </Text>
       <Text style={{paddingHorizontal: 20, marginTop: 20, textAlign: 'center'}}>
-        By : Aidana Duisembay, Akbota Mautkyzy
+        v1.0.0
+      </Text>
+      <Text style={{paddingHorizontal: 20, marginTop: 20, textAlign: 'center'}}>
+        By : Aitakyn Sultan, Aidana Duisembay, Akbota Mautkyzy, Alikhan Kumarov
       </Text>
     </View>
-  )
-}
+  );
+};
 
 export default About;

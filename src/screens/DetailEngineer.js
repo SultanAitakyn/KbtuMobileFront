@@ -70,9 +70,9 @@ const DetailEngineer = props => {
                 />
               </Button>
             </Left>
-              <Text>
-                My skill is <Text style={{fontWeight: 'bold'}}>{skill}</Text>
-              </Text>
+            <Text>
+              My skill is <Text style={{fontWeight: 'bold'}}>{skill}</Text>
+            </Text>
           </ListItem>
           <ListItem icon>
             <Left>
@@ -84,10 +84,10 @@ const DetailEngineer = props => {
                 />
               </Button>
             </Left>
-              <Text>
-                Expected Salary{' '}
-                <Text style={{fontWeight: 'bold'}}>${expected_salary}</Text>
-              </Text>
+            <Text>
+              Expected Salary{' '}
+              <Text style={{fontWeight: 'bold'}}>${expected_salary}</Text>
+            </Text>
           </ListItem>
           <ListItem icon>
             <Left>
@@ -99,9 +99,9 @@ const DetailEngineer = props => {
                 />
               </Button>
             </Left>
-              <Text>
-                Lives in <Text style={{fontWeight: 'bold'}}>{location}</Text>
-              </Text>
+            <Text>
+              Lives in <Text style={{fontWeight: 'bold'}}>{location}</Text>
+            </Text>
           </ListItem>
           <ListItem icon>
             <Left>
@@ -113,14 +113,14 @@ const DetailEngineer = props => {
                 />
               </Button>
             </Left>
-              <Text>
-                Born in{' '}
-                <Text style={{fontWeight: 'bold'}}>
-                  <Moment format="D MMMM YYYY" element={Text}>
-                    {date_of_birth}
-                  </Moment>
-                </Text>
+            <Text>
+              Born in{' '}
+              <Text style={{fontWeight: 'bold'}}>
+                <Moment format="D MMMM YYYY" element={Text}>
+                  {date_of_birth}
+                </Moment>
               </Text>
+            </Text>
           </ListItem>
           <ListItem icon>
             <Left>
@@ -132,9 +132,9 @@ const DetailEngineer = props => {
                 />
               </Button>
             </Left>
-              <Text>
-                <Text style={{fontWeight: 'bold'}}>{showcase}</Text>
-              </Text>
+            <Text>
+              <Text style={{fontWeight: 'bold'}}>{showcase}</Text>
+            </Text>
           </ListItem>
           <ListItem icon>
             <Left>
@@ -146,9 +146,9 @@ const DetailEngineer = props => {
                 />
               </Button>
             </Left>
-              <Text>
-                <Text style={{fontWeight: 'bold'}}>{phone}</Text>
-              </Text>
+            <Text>
+              <Text style={{fontWeight: 'bold'}}>{phone}</Text>
+            </Text>
           </ListItem>
           <ListItem icon>
             <Left>
@@ -156,9 +156,9 @@ const DetailEngineer = props => {
                 <FontAwesome5 style={{color: '#90949C'}} name="at" size={22} />
               </Button>
             </Left>
-              <Text>
-                <Text style={{fontWeight: 'bold'}}>{email}</Text>
-              </Text>
+            <Text>
+              <Text style={{fontWeight: 'bold'}}>{email}</Text>
+            </Text>
           </ListItem>
         </Content>
         <Divider

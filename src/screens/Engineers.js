@@ -29,8 +29,8 @@ class Engineers extends React.Component {
     super();
     this.state = {
       showSearch: false,
-      sortBy: 'date_created',
-      orderBy: 'DESC',
+      sortBy: 'name',
+      orderBy: 'ASC',
       search: '',
       limit: 5,
       active: false,
@@ -82,9 +82,9 @@ class Engineers extends React.Component {
 
   fetchEngineers = (
     search = '',
-    sortBy = 'date_created',
-    orderBy = 'DESC',
-    limit = 10,
+    sortBy = 'name',
+    orderBy = 'ASC',
+    limit = 5,
   ) => {
     const api =
       API_URL +
@@ -96,6 +96,7 @@ class Engineers extends React.Component {
       orderBy +
       '&limit=' +
       limit;
+    console.log(api);
     this.props.fetch(api);
   };
 
@@ -181,47 +182,47 @@ class Engineers extends React.Component {
         <Container>
           <Header noShadow style={{backgroundColor: '#4267B2'}}>
             <Body>
-              <Title>People</Title>
+              <Title style={{alignSelf: 'center'}}>Engineers</Title>
             </Body>
-            <Right>
-              <Button transparent>
-                <Icon name="search" onPress={this.showSearch} />
-              </Button>
-              <Button transparent>
-                <FontAwesome5
-                  name="filter"
-                  size={18}
-                  style={{color: '#FFF'}}
-                  onPress={() => this.setState({overlay: true})}
-                />
-              </Button>
-            </Right>
+            {/*<Right>*/}
+            {/*  <Button transparent>*/}
+            {/*    <Icon name="search" onPress={this.showSearch} />*/}
+            {/*  </Button>*/}
+            {/*  <Button transparent>*/}
+            {/*    <FontAwesome5*/}
+            {/*      name="filter"*/}
+            {/*      size={18}*/}
+            {/*      style={{color: '#FFF'}}*/}
+            {/*      onPress={() => this.setState({overlay: true})}*/}
+            {/*    />*/}
+            {/*  </Button>*/}
+            {/*</Right>*/}
           </Header>
-          {showSearch === true ? (
-            <>
-              <Header
-                searchBar
-                rounded
-                noShadow
-                style={{backgroundColor: '#4267B2'}}>
-                <Item>
-                  <Icon name="ios-search" />
-                  <Input placeholder="Search" onChangeText={this.search} />
-                  <FontAwesome5
-                    name="times"
-                    size={20}
-                    style={{marginRight: 10}}
-                  />
-                </Item>
-                <Button transparent>
-                  <Text>Search</Text>
-                </Button>
-              </Header>
-              <Text style={{marginLeft: 15}}>Result for : {search}</Text>
-            </>
-          ) : (
-            <></>
-          )}
+          {/*{showSearch === true ? (*/}
+          {/*  <>*/}
+          {/*    <Header*/}
+          {/*      searchBar*/}
+          {/*      rounded*/}
+          {/*      noShadow*/}
+          {/*      style={{backgroundColor: '#4267B2'}}>*/}
+          {/*      <Item>*/}
+          {/*        <Icon name="ios-search" />*/}
+          {/*        <Input placeholder="Search" onChangeText={this.search} />*/}
+          {/*        <FontAwesome5*/}
+          {/*          name="times"*/}
+          {/*          size={20}*/}
+          {/*          style={{marginRight: 10}}*/}
+          {/*        />*/}
+          {/*      </Item>*/}
+          {/*      <Button transparent>*/}
+          {/*        <Text>Search</Text>*/}
+          {/*      </Button>*/}
+          {/*    </Header>*/}
+          {/*    <Text style={{marginLeft: 15}}>Result for : {search}</Text>*/}
+          {/*  </>*/}
+          {/*) : (*/}
+          {/*  <></>*/}
+          {/*)}*/}
           <EngineersList />
         </Container>
       </>
